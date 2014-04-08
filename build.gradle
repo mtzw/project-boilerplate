@@ -37,6 +37,14 @@ task wrapper(type: Wrapper) {
   gradleVersion = '1.11'
 }
 
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      repository(url: "file://local/repository")
+    }
+  }
+}
+
 repositories {
   mavenCentral()
   mavenLocal()
